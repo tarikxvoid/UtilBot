@@ -781,19 +781,6 @@ async def help_command(interaction: discord.Interaction):
     await interaction.followup.send(embed=embed5, ephemeral=True)
     await interaction.followup.send(embed=embed6, ephemeral=True)
 
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Utility Bot made by unkn0wn_sh4d0w succesfully started on the Provided Host and Port!"
-
-def run():
-    app.run(host='0.0.0.0', port=8080)
-
-def keep_alive():
-    t = threading.Thread(target=run)
-    t.start()
-    
 token = os.environ['TOKEN']
 
 if not token:
